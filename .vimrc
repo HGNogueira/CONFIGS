@@ -333,7 +333,7 @@ function! <SID>BufcloseCloseIt()
      bnext
    endif
 
-   if bufnr("%") == l:currentBufNum
+   if bufnr("%") == <p>
      new
    endif
 
@@ -342,3 +342,18 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+
+"VUNDLE
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'tpope/vim-surround'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
